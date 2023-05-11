@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo | Simple Template Renderer</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  </head>
+  <body class="bg-light">
+    <div class="container my-5">
+      <h1 class="mb-3">Ejemplo de renderizado de template</h1>
+      <div class="card shadow">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Primer apellido</th>
+                <th>Segundo apellido</th>
+                <th>Edad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr template="person">
+                <td>#{count}</td>
+                <td>${name}</td>
+                <td>${surname}</td>
+                <td>${lastname}</td>
+                <td>${age}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/renderer.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
